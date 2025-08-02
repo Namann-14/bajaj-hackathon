@@ -1,9 +1,11 @@
 'use client'
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export default function FinalCTASection() {
   return (
     <motion.section
+      id="policy-details"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
@@ -16,10 +18,12 @@ export default function FinalCTASection() {
             Need Help with Your Claim?<br />Contact Bajaj Allianz
           </div>
           <div className="flex flex-col items-end">
-            <button className="bg-white text-teal-600 font-bold px-8 py-3 rounded-xl text-lg flex items-center mb-2 relative group shadow-md">
-              Get Support
-              <svg className="ml-2 w-6 h-6" fill="none" stroke="#14b8a6" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round"/></svg>
-            </button>
+            <Link href="/chat">
+              <button className="bg-white text-teal-600 font-bold px-8 py-3 rounded-xl text-lg flex items-center mb-2 relative group shadow-md hover:bg-gray-50 transition-colors">
+                Get Support
+                <svg className="ml-2 w-6 h-6" fill="none" stroke="#14b8a6" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round"/></svg>
+              </button>
+            </Link>
             <div className="flex items-center mt-2">
               <img src="/placeholder-user.jpg" className="w-8 h-8 rounded-full border-2 border-white -ml-2 first:ml-0" />
               <img src="/placeholder-user.jpg" className="w-8 h-8 rounded-full border-2 border-white -ml-2" />

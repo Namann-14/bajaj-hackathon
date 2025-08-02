@@ -54,6 +54,15 @@ const Example = () => {
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      if (text.trim() && documentUrl.trim()) {
+        handleSubmit(e as any);
+      }
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!text.trim() || !documentUrl.trim()) {
@@ -111,7 +120,7 @@ const Example = () => {
         <div
           ref={chatRef}
           className="flex-1 overflow-y-auto px-8 py-6"
-          style={{ minHeight: "70vh", maxHeight: "70vh" }}
+          style={{ minHeight: "61vh", maxHeight: "60vh" }}
         >
           {messages.length === 0 ? (
             <div className="flex-1 flex flex-col items-center justify-center h-full w-full select-none">
@@ -168,6 +177,7 @@ const Example = () => {
             <AIInputTextarea
               value={text}
               onChange={(e) => setText(e.target.value)}
+              onKeyDown={handleKeyDown}
               placeholder="Ask your question about the document..."
               rows={1}
               className="w-full min-w-0 resize-none border border-gray-200 px-4 py-2 shadow-sm"

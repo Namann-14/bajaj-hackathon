@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 export default function TestimonialsSection() {
   return (
     <motion.section
+      id="testimonials"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
