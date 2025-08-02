@@ -1,0 +1,20 @@
+# Document processing dependencies
+requests
+# python-magic  # Commented out - Windows compatibility issue
+PyPDF2
+python-docx
+beautifulsoup4
+
+# Vector database and embeddings
+pinecone  # Updated package name
+google-generativeai
+sentence-transformers
+
+# Web framework for API
+fastapi
+uvicorn
+pydantic
+
+# Utility libraries
+python-dotenv
+numpy
