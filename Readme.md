@@ -508,37 +508,6 @@ npm run build
 
 ## 🚀 Deployment
 
-### Backend Deployment
-
-#### Option 1: Docker (Recommended)
-
-```dockerfile
-FROM python:3.9-slim
-
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-
-COPY . .
-EXPOSE 8000
-
-CMD ["uvicorn", "hackrx_api:app", "--host", "0.0.0.0", "--port", "8000"]
-```
-
-#### Option 2: Direct Deployment
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Set environment variables
-export GEMINI_API_KEY=your_key
-export PINECONE_API_KEY=your_key
-
-# Start with uvicorn
-uvicorn hackrx_api:app --host 0.0.0.0 --port 8000
-```
-
 ### Frontend Deployment
 
 #### Vercel (Recommended)
@@ -632,7 +601,6 @@ SOFTWARE.
 ## 🙏 Acknowledgments
 
 - **Google Gemini AI** for intelligent question answering
-- **Pinecone** for vector database services
 - **Next.js** for the modern React framework
 - **FastAPI** for the high-performance API framework
 - **Tailwind CSS** for the utility-first CSS framework
