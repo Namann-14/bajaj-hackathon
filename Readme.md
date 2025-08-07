@@ -14,20 +14,20 @@ A comprehensive platform that combines advanced AI document processing with a mo
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Architecture](#architecture)
-- [Quick Start](#quick-start)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Documentation](#api-documentation)
-- [Frontend Development](#frontend-development)
-- [Backend Development](#backend-development)
-- [Configuration](#configuration)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
+- [🎯 Overview](#-overview)
+- [✨ Features](#-features)
+- [🏗️ Architecture](#️-architecture)
+- [🚀 Quick Start](#-quick-start)
+- [📦 Installation](#-installation)
+- [🎯 Usage](#-usage-1)
+- [📚 API Documentation](#-api-documentation)
+- [🎨 Frontend Development](#-frontend-development)
+- [🔧 Backend Development](#-backend-development)
+- [⚙️ Configuration](#️-configuration)
+- [🧪 Testing](#-testing)
+- [🚀 Deployment](#-deployment)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ## 🎯 Overview
 
@@ -120,8 +120,8 @@ HackRx Document Intelligence Platform is a complete solution that enables users 
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd hackrx-document-intelligence
+git clone https://github.com/Namann-14/bajaj-hackathon.git
+cd bajaj-hackathon
 ```
 
 ### 2. Backend Setup
@@ -594,7 +594,7 @@ We welcome contributions! Please follow these steps:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see below for details.
 
 ```
 MIT License
@@ -633,16 +633,17 @@ SOFTWARE.
 
 For support, please:
 
-1. Check the [documentation](#documentation) first
-2. Search existing [issues](../../issues)
+1. Check the [documentation](#-table-of-contents) first
+2. Search existing [issues](https://github.com/Namann-14/bajaj-hackathon/issues)
 3. Create a new issue with detailed information
 
 ## 🔗 Links
 
-- **Live Demo**: [Coming Soon]
-- **API Documentation**: http://localhost:8000/docs
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:8000
+- **Live Demo**: [Deploy and add link here]
+- **API Documentation**: http://localhost:8000/docs (when running locally)
+- **Frontend**: http://localhost:3000 (when running locally)
+- **Backend API**: http://localhost:8000 (when running locally)
+- **GitHub Repository**: https://github.com/Namann-14/bajaj-hackathon
 
 ---
 
