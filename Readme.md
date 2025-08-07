@@ -12,6 +12,15 @@ A comprehensive platform that combines advanced AI document processing with a mo
 ![Gemini AI](https://img.shields.io/badge/Gemini%20AI-1.5%20Flash-orange)
 ![Pinecone](https://img.shields.io/badge/Pinecone-Vector%20DB-purple)
 
+
+## 🪧 Demo
+
+
+https://github.com/user-attachments/assets/7aa5c43d-a54e-4363-bc72-edf5f00d2d0b
+
+
+
+
 ## 📋 Table of Contents
 
 - [🎯 Overview](#-overview)
