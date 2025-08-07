@@ -1,13 +1,15 @@
 """
 🏆 HackRx Document Intelligence - Your Custom Documents & Questions
 Easy interface to process your own PDFs with your own questions
+⚡ OPTIMIZED FOR SPEED - Now with parallel processing and caching!
 """
 
 from hackrx_system import HackRxDocumentIntelligenceSystem
 import json
+import time
 
 def main():
-    """Process your own documents and questions"""
+    """Process your own documents and questions - OPTIMIZED VERSION"""
     
     # 📄 ADD YOUR DOCUMENT URLs HERE
     # You can add any PDF URLs (local files, Google Drive, Dropbox, etc.)
@@ -39,30 +41,41 @@ def main():
     ]
     
     print("🚀 Starting HackRx Document Intelligence System")
+    print("⚡ OPTIMIZED VERSION - Faster processing with caching & parallel execution!")
     print(f"📄 Processing {len(MY_DOCUMENTS)} document(s)")
     print(f"❓ Answering {len(MY_QUESTIONS)} question(s)")
-    print("-" * 60)
+    print("-" * 80)
     
-    # Initialize system
+    # Initialize system (will load models once)
+    print("🔧 Initializing AI models...")
+    start_time = time.time()
     system = HackRxDocumentIntelligenceSystem()
+    init_time = time.time() - start_time
+    print(f"✅ System initialized in {init_time:.2f} seconds")
     
     # Process each document with all questions
+    total_start = time.time()
+    
     for i, document_url in enumerate(MY_DOCUMENTS, 1):
         print(f"\n📄 Processing Document {i}/{len(MY_DOCUMENTS)}")
         print(f"🔗 URL: {document_url[:100]}...")
         
+        doc_start = time.time()
+        
         try:
-            # Get answers for all questions
+            # Get answers for all questions (now parallel processed!)
             answers = system.process_query(document_url, MY_QUESTIONS)
             
+            doc_time = time.time() - doc_start
+            
             # Display results
-            print(f"\n✅ Document {i} Results:")
-            print("=" * 60)
+            print(f"\n✅ Document {i} Results (⚡ {doc_time:.2f}s):")
+            print("=" * 80)
             
             for j, (question, answer) in enumerate(zip(MY_QUESTIONS, answers), 1):
                 print(f"\n❓ Question {j}: {question}")
                 print(f"💡 Answer: {answer}")
-                print("-" * 40)
+                print("-" * 50)
                 
             # Save results to JSON file
             result_file = f"results_document_{i}.json"
@@ -70,19 +83,32 @@ def main():
                 "document_url": document_url,
                 "questions": MY_QUESTIONS,
                 "answers": answers,
-                "total_questions": len(MY_QUESTIONS)
+                "total_questions": len(MY_QUESTIONS),
+                "processing_time_seconds": doc_time,
+                "questions_per_second": len(MY_QUESTIONS) / doc_time if doc_time > 0 else 0
             }
             
             with open(result_file, 'w', encoding='utf-8') as f:
                 json.dump(results, f, indent=2, ensure_ascii=False)
             
             print(f"\n💾 Results saved to: {result_file}")
+            print(f"⚡ Speed: {len(MY_QUESTIONS)/doc_time:.1f} questions/second")
             
         except Exception as e:
             print(f"❌ Error processing document {i}: {e}")
     
+    total_time = time.time() - total_start
+    
     print(f"\n🎉 Completed processing all {len(MY_DOCUMENTS)} documents!")
+    print(f"⚡ Total time: {total_time:.2f} seconds")
+    print(f"⚡ Average per document: {total_time/len(MY_DOCUMENTS):.2f} seconds")
     print("📁 Check the results_document_*.json files for detailed answers")
+    print("\n🚀 Performance optimizations applied:")
+    print("  ✅ Document caching (no re-download/re-processing)")
+    print("  ✅ Parallel question processing")
+    print("  ✅ Optimized embeddings generation")
+    print("  ✅ Faster Pinecone operations")
+    print("  ✅ Reduced network timeouts")
 
 if __name__ == "__main__":
     main()

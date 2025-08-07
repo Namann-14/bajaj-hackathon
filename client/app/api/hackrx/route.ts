@@ -4,7 +4,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     
-    const response = await fetch('http://localhost:8000/api/v1/hackrx/run', {
+    const response = await fetch('https://jatin2435-hackrx-api.hf.space/api/v1/hackrx/run', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

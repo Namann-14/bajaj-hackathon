@@ -1,5 +1,6 @@
 # Document processing dependencies
 requests
+aiohttp  # For async downloads
 # python-magic  # Commented out - Windows compatibility issue
 PyPDF2
 python-docx
